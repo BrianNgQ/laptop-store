@@ -1,0 +1,307 @@
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+  width: 200px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product-detail {
+  text-align: center;
+  margin: 20px;
+}
+/* Đặt khoảng cách giữa các phần tử trong form */
+form {
+  max-width: 500px; /* Giới hạn chiều rộng của form */
+  margin: 0 auto; /* Căn giữa form */
+  padding: 20px;
+  background-color: #f8f9fa; /* Màu nền sáng cho form */
+  border-radius: 8px; /* Bo tròn góc */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Thêm bóng nhẹ */
+}
+
+/* Đặt khoảng cách giữa các ô input */
+.form-outline {
+  margin-bottom: 15px; /* Giảm khoảng cách giữa các input */
+}
+
+/* Tăng độ cao cho các ô input để chúng dễ nhìn hơn */
+.form-control {
+  height: 40px; /* Đảm bảo các ô input có chiều cao hợp lý */
+  padding: 10px;
+  font-size: 16px; /* Đảm bảo font chữ dễ đọc */
+  border-radius: 4px; /* Bo tròn các góc input */
+  border: 1px solid #ced4da; /* Màu đường viền */
+}
+
+.form-control:focus {
+  border-color: #007bff; /* Thay đổi màu viền khi ô input được chọn */
+  box-shadow: 0 0 0 0.25rem rgba(38, 143, 255, 0.25); /* Thêm bóng viền khi focus */
+}
+
+/* Đặt khoảng cách giữa các button */
+.btn {
+  height: 45px; /* Chiều cao button vừa phải */
+  font-size: 16px;
+  padding: 0 15px;
+  border-radius: 4px; /* Bo tròn góc */
+  transition: background-color 0.3s ease; /* Thêm hiệu ứng chuyển màu khi hover */
+}
+
+/* Chỉnh kiểu cho button khi hover */
+.btn:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Đảm bảo các checkbox và label có khoảng cách hợp lý */
+.form-check {
+  margin-bottom: 20px; /* Giảm khoảng cách giữa checkbox và các phần tử dưới */
+}
+
+.form-check-input {
+  margin-right: 10px; /* Đặt khoảng cách giữa checkbox và label */
+}
+
+.form-check-label {
+  font-size: 14px;
+}
+
+/* Các liên kết (đăng ký, quên mật khẩu) */
+a {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Các nút social login */
+.btn-link {
+  font-size: 20px;
+  color: #495057;
+}
+
+.btn-link:hover {
+  color: #007bff;
+}
+
+.nav-pills .nav-link {
+  border-radius: 0.375rem;
+  padding: 10px 20px;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #007bff; /* Màu nền khi tab active */
+}
+
+.text-center {
+  font-size: 14px;
+}
+
+@media (max-width: 576px) {
+  /* Đảm bảo các phần tử còn gọn gàng khi thu nhỏ màn hình */
+  .form-control {
+    font-size: 14px; /* Giảm font size trên thiết bị nhỏ */
+  }
+  .btn {
+    font-size: 14px; /* Giảm kích thước của button trên thiết bị nhỏ */
+  }
+}
+/* Đặt chiều cao nhỏ hơn cho button */
+.btn {
+  height: 35px; /* Giảm chiều cao của nút */
+  font-size: 14px; /* Giảm kích thước chữ trên button */
+  padding: 0 12px; /* Thêm padding nhỏ hơn để nút không quá rộng */
+  border-radius: 4px; /* Bo tròn góc của button */
+  transition: background-color 0.3s ease;
+}
+
+/* Hiệu ứng khi hover trên button */
+.btn:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Đặc biệt cho button "Sign In" và "Sign Up" */
+.btn-primary {
+  font-size: 14px;
+  padding: 0 20px; /* Padding nhỏ gọn hơn */
+  height: 40px; /* Giảm chiều cao button cho gọn */
+}
+
+/* Thay đổi cho các button social login */
+.btn-link {
+  font-size: 16px; /* Giảm font-size cho button social */
+  padding: 0 10px;
+  margin: 5px;
+  height: 35px; /* Giảm chiều cao button social */
+}
+
+.nav-pills .nav-link {
+  border-radius: 0.375rem;
+  padding: 8px 16px; /* Giảm padding cho các tab */
+}
+
+.nav-pills .nav-link.active {
+  background-color: #007bff; /* Màu nền khi tab active */
+}
+/* Hiệu ứng hover cho card sản phẩm */
+.card:hover {
+  transform: translateY(-5px); /* Di chuyển sản phẩm lên một chút */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng cho sản phẩm */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+}
+
+/* Hiệu ứng hover cho hình ảnh sản phẩm */
+.card:hover .card-img-top {
+  opacity: 0.8; /* Làm mờ hình ảnh khi hover */
+  transition: opacity 0.3s ease; /* Hiệu ứng mượt mà khi làm mờ hình ảnh */
+}
+
+/* Hiệu ứng hover cho tên và giá sản phẩm */
+.card:hover .card-body {
+  background-color: #f8f9fa; /* Thay đổi màu nền của phần thông tin sản phẩm */
+}
+
+/* Đổi màu nền button khi hover */
+.card:hover .btn {
+  background-color: #007bff; /* Đổi màu nền của button khi hover */
+  border-color: #007bff; /* Đổi màu đường viền của button */
+}
+img {
+  width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của khung chứa */
+  height: 400px; /* Đặt chiều cao cố định để đảm bảo tính đồng nhất */
+  object-fit: cover; /* Giữ tỷ lệ ảnh, cắt phần thừa nếu cần */
+  border-radius: 8px; /* Bo góc ảnh để tạo cảm giác mềm mại */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm đổ bóng nhẹ để nổi bật ảnh */
+}
+/* Đảm bảo các nút điều hướng của carousel đậm hơn */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền đen với độ trong suốt giảm */
+  border-radius: 50%; /* Thêm viền tròn cho biểu tượng */
+  width: 40px; /* Tăng kích thước */
+  height: 40px;
+}
+/* Đảm bảo label luôn nằm phía trên input */
+.form-outline {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-outline input {
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+/* Đưa label lên phía trên */
+.form-outline label {
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  font-size: 0.85rem;
+  color: #495057;
+  background-color: white;
+  padding: 0 5px;
+  font-weight: bold;
+}
+/*----------------------------------------------------------------*/
+/* Footer Styles */
+footer {
+  background-color: #343a40; /* Nền tối */
+  color: #f8f9fa; /* Màu chữ sáng */
+  padding: 2rem 0; /* Khoảng cách trên/dưới */
+}
+
+footer .container {
+  max-width: 1200px; /* Giới hạn chiều rộng của footer */
+}
+
+footer h5 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #ffc107; /* Màu vàng nổi bật cho tiêu đề */
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #d1d1d1; /* Màu chữ xám nhạt */
+}
+
+footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+footer ul li {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+footer ul li:hover {
+  color: #ffc107; /* Đổi màu khi hover */
+  text-decoration: underline; /* Gạch chân khi hover */
+}
+
+footer .font-weight-bold {
+  font-size: 1.1rem;
+  color: #ffc107; /* Màu vàng nổi bật cho tên cửa hàng */
+}
+
+footer img {
+  width: 40px; /* Kích thước logo */
+  margin-right: 10px;
+}
+
+footer .text-center p {
+  font-size: 0.85rem;
+  color: #a0a0a0; /* Màu xám nhạt cho bản quyền */
+  margin-top: 1.5rem;
+}
+
+footer .row div {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  footer {
+    text-align: center;
+  }
+  footer img {
+    display: block;
+    margin: 0 auto;
+  }
+}

@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import ProductList from "./pages/ProductList";
+import ProductByBrand from "./pages/ProductByBrand";
+import ProductDetail from "./pages/ProductDetail";
+import AuthForm from "./pages/AuthForm";
+import CartPage from "./pages/CartPage"; // Import CartPage
+import "./styles/App.css";
 
-function App() {
+const App = () => {
+  const [cartItems, setCartItems] = useState([]);
+
+  const handleAddToCart = (product) => {
+    setCartItems([...cartItems, product]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/products"
+            element={<ProductList onAddToCart={handleAddToCart} />}
+          />
+          <Route
+            path="/product/:id"
+            element={<ProductDetail onAddToCart={handleAddToCart} />}
+          />
+          <Route
+            path="/products/:brand"
+            element={<ProductByBrand onAddToCart={handleAddToCart} />}
+          />
+          <Route path="/auth" element={<AuthForm />} />
+          <Route path="/cart" element={<CartPage cartItems={cartItems} />} />
+        </Routes>
+      </main>
+      <Footer />
+    </Router>
   );
-}
+};
 
 export default App;
